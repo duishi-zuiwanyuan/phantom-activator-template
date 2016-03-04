@@ -1,7 +1,18 @@
-@(message: String)
+@import helper._
+
+@(feedForm: Form[CreateFeedForm])
 
 @main("Welcome to Play") {
+    <ul id="feeds"></ul>
+    @form(routes.FeedsController.addFeed) {
+        @inputText(feedForm("title"))
+        @inputText(feedForm("summ"))
+        @inputText(feedForm("summImgUrl"))
+        @inputText(feedForm("srcId"))
+        @inputText(feedForm("srcUrl"))
 
-    @play20.welcome(message)
-
+        <div class="buttons">
+            <input type="submit" value="Add Feed"/>
+        </div>
+    }
 }

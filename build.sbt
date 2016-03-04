@@ -1,20 +1,20 @@
-name := """play-phantom"""
+name := """Next-Admin"""
 
-version := "1.0-SNAPSHOT"
+version := "1.0"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.7"
 
-val PhantomVersion = "1.11.0"
+val phantomVersion = "1.22.0"
 
 libraryDependencies ++= Seq(
   jdbc,
   anorm,
   cache,
   ws,
-  "com.websudos"  %% "phantom-dsl"                   % PhantomVersion,
-  "com.websudos"  %% "phantom-testkit"               % PhantomVersion,
+  "com.wisedu.next" % "core" % "1.0",
+  "com.websudos"  %% "phantom-dsl"                   % phantomVersion,
   "com.websudos"  %% "util-parsers"                  % "0.9.11"
 )
 
@@ -29,3 +29,5 @@ resolvers ++= Seq(
   "Twitter Repository"               at "http://maven.twttr.com",
   "Websudos"                         at "https://dl.bintray.com/websudos/oss-releases/"
 )
+
+resolvers += Resolver.mavenLocal
