@@ -2,14 +2,15 @@
 
 @(feedForm: Form[CreateFeedForm])
 
-@main("Welcome to Play") {
+@main("Welcome to Next") {
     <ul id="feeds"></ul>
     @form(routes.FeedsController.addFeed) {
         @inputText(feedForm("title"))
-        @inputText(feedForm("summ"))
-        @inputText(feedForm("summImgUrl"))
-        @inputText(feedForm("srcId"))
-        @inputText(feedForm("srcUrl"))
+        @inputText(feedForm("summary"))
+        @inputText(feedForm("summary_img_url"))
+        @inputText(feedForm("src_id"))
+        @inputText(feedForm("src_url"))
+        @inputText(feedForm("service_name"))
 
         <div class="buttons">
             <input type="submit" value="Add Feed"/>

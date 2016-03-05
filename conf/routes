@@ -3,4 +3,6 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.FeedsController.index
+GET     /                               controllers.FeedsController.index
+
+POST    /feed                           controllers.FeedsController.addFeed

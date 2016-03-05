@@ -9,10 +9,6 @@ scalaVersion := "2.11.7"
 val phantomVersion = "1.22.0"
 
 libraryDependencies ++= Seq(
-  jdbc,
-  anorm,
-  cache,
-  ws,
   "com.wisedu.next" % "core" % "1.0",
   "com.websudos"  %% "phantom-dsl"                   % phantomVersion,
   "com.websudos"  %% "util-parsers"                  % "0.9.11"
